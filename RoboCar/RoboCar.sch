@@ -1,0 +1,914 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A2 23386 16535
+encoding utf-8
+Sheet 1 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_UNO_R3 BRAIN1
+U 1 1 6112EF6C
+P 11050 8300
+F 0 "BRAIN1" H 11150 9500 50  0000 C CNB
+F 1 "Arduino_UNO_R3" H 11350 9400 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 11050 8300 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 11050 8300 50  0001 C CNN
+	1    11050 8300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male SERVO-XPORT1
+U 1 1 6116F677
+P 2850 2200
+F 0 "SERVO-XPORT1" H 3100 2450 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 2958 2390 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x03_P1.27mm_Vertical" H 2850 2200 50  0001 C CNN
+F 3 "~" H 2850 2200 50  0001 C CNN
+	1    2850 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male SERVO-XPORT2
+U 1 1 611A0C19
+P 2850 3250
+F 0 "SERVO-XPORT2" H 3100 3500 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 2958 3440 50  0001 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x03_P1.27mm_Vertical" H 2850 3250 50  0001 C CNN
+F 3 "~" H 2850 3250 50  0001 C CNN
+	1    2850 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3150 4500 3150
+NoConn ~ 11550 7700
+NoConn ~ 11550 7900
+NoConn ~ 11550 8100
+NoConn ~ 11550 8700
+NoConn ~ 11550 8800
+NoConn ~ 11050 9400
+NoConn ~ 10950 9400
+NoConn ~ 10550 8100
+NoConn ~ 11150 7300
+NoConn ~ 10550 7700
+NoConn ~ 10550 7800
+$Comp
+L Connector:Conn_01x06_Male XPORT-INFRA_MODULE1
+U 1 1 617845FE
+P 17250 7500
+F 0 "XPORT-INFRA_MODULE1" H 18200 7850 50  0000 R CNN
+F 1 "Conn_01x06_Male" H 17850 8000 50  0001 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Vertical" H 17250 7500 50  0001 C CNN
+F 3 "~" H 17250 7500 50  0001 C CNN
+	1    17250 7500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Timer_RTC:DS1307+ RTC1
+U 1 1 624D34AC
+P 18000 11700
+F 0 "RTC1" H 17900 12350 50  0000 L CNB
+F 1 "DS1307+" H 18544 11655 50  0001 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 18000 11200 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DS1307.pdf" H 18000 11500 50  0001 C CNN
+	1    18000 11700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	17400 11400 17400 11600
+Wire Wire Line
+	17400 11600 17500 11600
+Wire Wire Line
+	18000 12100 19050 12100
+Wire Wire Line
+	17400 11700 17400 12100
+Wire Wire Line
+	17400 12100 18000 12100
+Wire Wire Line
+	17250 11800 17250 11300
+NoConn ~ 17500 11800
+NoConn ~ 17500 11900
+$Comp
+L Device:Battery_Cell RTC-BATT1
+U 1 1 626918EC
+P 19050 11800
+F 0 "RTC-BATT1" V 18795 11850 50  0000 C CNN
+F 1 "Battery_Cell" V 18886 11850 50  0000 C CNN
+F 2 "" V 19050 11860 50  0001 C CNN
+F 3 "~" V 19050 11860 50  0001 C CNN
+	1    19050 11800
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	19050 11300 19050 11600
+Wire Wire Line
+	19050 12100 19050 11900
+Text Label 17000 11400 0    50   ~ 0
+SDA
+Text Label 17000 11500 0    50   ~ 0
+SCL
+Text Label 17000 11600 0    50   ~ 0
+SQW
+Text Label 17000 11700 0    50   ~ 0
+GND
+Text Label 17000 11800 0    50   ~ 0
+VCC
+$Comp
+L Device:R R2
+U 1 1 628688C2
+P 11950 9900
+F 0 "R2" V 11743 9900 50  0000 C CNN
+F 1 "10K" V 11834 9900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 11880 9900 50  0001 C CNN
+F 3 "~" H 11950 9900 50  0001 C CNN
+	1    11950 9900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 6334A168
+P 4150 1150
+F 0 "R3" V 3943 1150 50  0000 C CNN
+F 1 "10K" V 4034 1150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4080 1150 50  0001 C CNN
+F 3 "~" H 4150 1150 50  0001 C CNN
+	1    4150 1150
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male BUMPPER-XPORT1
+U 1 1 633AA079
+P 2850 1150
+F 0 "BUMPPER-XPORT1" H 2950 1300 50  0000 L CNN
+F 1 "Conn_01x02_Male" V 3003 1194 50  0001 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical" H 2850 1150 50  0001 C CNN
+F 3 "~" H 2850 1150 50  0001 C CNN
+	1    2850 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 4650 3050 4650
+Text Label 3200 4650 2    50   ~ 0
+EnB
+Text Label 3200 4750 2    50   ~ 0
+IN4
+Text Label 3200 4850 2    50   ~ 0
+IN3
+Text Label 3200 4950 2    50   ~ 0
+IN2
+Text Label 3200 5050 2    50   ~ 0
+IN1
+Text Label 3200 5150 2    50   ~ 0
+EnA
+$Comp
+L Connector:Conn_01x06_Female XPORT-MOROR_DRIVER1
+U 1 1 612AA340
+P 2850 4850
+F 0 "XPORT-MOROR_DRIVER1" H 2800 4450 50  0000 R CNN
+F 1 "Conn_01x06_Female" H 2742 4416 50  0001 C CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_1x06_P1.27mm_Vertical" H 2850 4850 50  0001 C CNN
+F 3 "~" H 2850 4850 50  0001 C CNN
+	1    2850 4850
+	-1   0    0    -1  
+$EndComp
+Text GLabel 11900 8300 2    50   UnSpc ~ 0
+OUT-INFRA_MODULE
+Text GLabel 11900 8400 2    50   UnSpc ~ 0
+IN2-INFRA_MODULE
+Text GLabel 11900 8500 2    50   UnSpc ~ 0
+IN3-INFRA_MODULE
+Text GLabel 11900 8600 2    50   UnSpc ~ 0
+IN4-INFRA_MODULE
+Text GLabel 16950 7300 0    50   UnSpc ~ 0
+OUT-INFRA_MODULE
+Text GLabel 16950 7400 0    50   UnSpc ~ 0
+IN2-INFRA_MODULE
+Text GLabel 16950 7500 0    50   UnSpc ~ 0
+IN3-INFRA_MODULE
+Text GLabel 16950 7600 0    50   UnSpc ~ 0
+IN4-INFRA_MODULE
+Wire Wire Line
+	11550 8300 11900 8300
+Wire Wire Line
+	11550 8400 11900 8400
+Wire Wire Line
+	11550 8500 11900 8500
+Wire Wire Line
+	11550 8600 11900 8600
+Wire Wire Line
+	17050 7300 16950 7300
+Wire Wire Line
+	16950 7400 17050 7400
+Wire Wire Line
+	17050 7500 16950 7500
+Wire Wire Line
+	16950 7600 17050 7600
+Text GLabel 16950 7700 0    50   UnSpc ~ 0
+VCC-INFRA_MODULE
+Text GLabel 16950 7800 0    50   UnSpc ~ 0
+GND-INFRA_MODULE
+Wire Wire Line
+	17050 7700 16950 7700
+Wire Wire Line
+	17050 7800 16950 7800
+Text GLabel 6700 13100 2    50   UnSpc ~ 0
+VCC-I2C-BRAIN1
+Text GLabel 5550 12950 2    50   UnSpc ~ 0
+GND-BRAIN1
+Text GLabel 14500 11700 0    50   UnSpc ~ 0
+GND-RTC1
+Text GLabel 14500 11800 0    50   UnSpc ~ 0
+VCC-RTC1
+Text GLabel 14500 11400 0    50   UnSpc ~ 0
+SDA_I2C-BRAIN1
+Text GLabel 14500 11500 0    50   UnSpc ~ 0
+SCL_I2C-BRAIN1
+Wire Wire Line
+	3050 4750 3500 4750
+Wire Wire Line
+	3050 4850 3500 4850
+Wire Wire Line
+	3050 4950 3500 4950
+Wire Wire Line
+	3050 5050 3500 5050
+Wire Wire Line
+	3050 5150 3500 5150
+Wire Wire Line
+	10550 8300 10200 8300
+Wire Wire Line
+	10550 8400 10200 8400
+Wire Wire Line
+	10550 8500 10200 8500
+Wire Wire Line
+	10550 8600 10200 8600
+Wire Wire Line
+	10550 8700 10200 8700
+Wire Wire Line
+	10550 8800 10200 8800
+Text GLabel 3500 4650 2    50   UnSpc ~ 0
+ENB-MOTOR_DRIVER1
+Text GLabel 3500 5150 2    50   UnSpc ~ 0
+ENA-MOTOR_DRIVER1
+Text GLabel 3500 5050 2    50   UnSpc ~ 0
+IN1-MOTOR_DRIVER1
+Text GLabel 3500 4950 2    50   UnSpc ~ 0
+IN2-MOTOR_DRIVER1
+Text GLabel 3500 4850 2    50   UnSpc ~ 0
+IN3-MOTOR_DRIVER1
+Text GLabel 3500 4750 2    50   UnSpc ~ 0
+IN4-MOTOR_DRIVER1
+Text GLabel 10200 8700 0    50   UnSpc ~ 0
+ENB-MOTOR_DRIVER1
+Text GLabel 10200 8800 0    50   UnSpc ~ 0
+ENA-MOTOR_DRIVER1
+Text GLabel 10200 8300 0    50   UnSpc ~ 0
+IN4-MOTOR_DRIVER1
+Text GLabel 10200 8400 0    50   UnSpc ~ 0
+IN3-MOTOR_DRIVER1
+Text GLabel 10200 8500 0    50   UnSpc ~ 0
+IN2-MOTOR_DRIVER1
+Text GLabel 10200 8600 0    50   UnSpc ~ 0
+IN1-MOTOR_DRIVER1
+Text GLabel 4500 3450 2    50   UnSpc ~ 0
+GND-SERVOS
+Text GLabel 4500 3300 2    50   UnSpc ~ 0
+VCC-SERVOS
+Text GLabel 11450 6950 2    50   UnSpc ~ 0
+VCC-BRAIN1
+Text GLabel 4500 800  2    50   UnSpc ~ 0
+IN-BUMBER1
+Text GLabel 10200 7900 0    50   UnSpc ~ 0
+IN-BUMBER1
+Wire Wire Line
+	10550 7900 10200 7900
+Text GLabel 4500 3150 2    50   UnSpc ~ 0
+12V_IN-SERVO2
+Text GLabel 4500 2100 2    50   UnSpc ~ 0
+12V_IN-SERVO1
+Wire Wire Line
+	3050 2100 4500 2100
+Text GLabel 10200 8000 0    50   UnSpc ~ 0
+12V_IN-SERVO1
+Text GLabel 10200 8200 0    50   UnSpc ~ 0
+12V_IN-SERVO2
+Wire Wire Line
+	10550 8000 10200 8000
+Wire Wire Line
+	10550 8200 10200 8200
+Text Label 3550 2100 2    50   ~ 0
+12V_IN-SERVO1
+Text Label 3550 2200 2    50   ~ 0
+VCC-SERVO1
+Text Label 3550 2300 2    50   ~ 0
+GND-SERVO1
+Text Label 3550 3150 2    50   ~ 0
+12V_IN-SERVO2
+Text Label 3550 3250 2    50   ~ 0
+VCC-SERVO2
+Text Label 3550 3350 2    50   ~ 0
+GND-SERVO2
+Wire Wire Line
+	6600 13250 6600 13100
+Wire Wire Line
+	6600 13100 6700 13100
+Wire Wire Line
+	6600 13250 6700 13250
+Wire Wire Line
+	5450 12950 5550 12950
+Text GLabel 5550 13250 2    50   UnSpc ~ 0
+GND-INFRA_MODULE
+Wire Wire Line
+	5450 13250 5550 13250
+Connection ~ 6600 13100
+Text GLabel 11900 9100 2    50   UnSpc ~ 0
+SCL_I2C-BRAIN1
+Text GLabel 11900 9000 2    50   UnSpc ~ 0
+SDA_I2C-BRAIN1
+Wire Wire Line
+	11550 9000 11750 9000
+Wire Wire Line
+	11550 9100 11650 9100
+Connection ~ 11750 9000
+Wire Wire Line
+	11750 9000 11900 9000
+Connection ~ 11650 9100
+Wire Wire Line
+	11650 9100 11900 9100
+Text GLabel 12400 9750 2    50   UnSpc ~ 0
+VCC-I2C-BRAIN1
+$Comp
+L Device:R R1
+U 1 1 6282C62C
+P 11950 9550
+F 0 "R1" V 11743 9550 50  0000 C CNN
+F 1 "10K" V 11834 9550 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 11880 9550 50  0001 C CNN
+F 3 "~" H 11950 9550 50  0001 C CNN
+	1    11950 9550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	11650 9900 11650 9100
+Wire Wire Line
+	11750 9550 11750 9000
+Wire Wire Line
+	11750 9550 11800 9550
+Wire Wire Line
+	11650 9900 11800 9900
+Wire Wire Line
+	12100 9550 12150 9550
+Wire Wire Line
+	12150 9550 12150 9750
+Wire Wire Line
+	12150 9900 12100 9900
+Wire Wire Line
+	12150 9750 12400 9750
+Connection ~ 12150 9750
+Wire Wire Line
+	12150 9750 12150 9900
+Text GLabel 10950 9700 0    50   UnSpc ~ 0
+GND-BRAIN1
+Wire Wire Line
+	11150 9700 10950 9700
+Wire Wire Line
+	11150 9400 11150 9700
+Text GLabel 6700 13400 2    50   UnSpc ~ 0
+VCC-SONAR1
+Text GLabel 5550 13400 2    50   UnSpc ~ 0
+GND-SONAR1
+Wire Wire Line
+	6600 13250 6600 13400
+Wire Wire Line
+	6600 13400 6700 13400
+Connection ~ 6600 13250
+Wire Wire Line
+	5450 13250 5450 13400
+Wire Wire Line
+	5450 13400 5550 13400
+Connection ~ 5450 13250
+Text GLabel 6700 13250 2    50   UnSpc ~ 0
+VCC-INFRA_MODULE
+Text GLabel 6700 12950 2    50   UnSpc ~ 0
+VCC-BRAIN1
+Text GLabel 6700 13550 2    50   UnSpc ~ 0
+VCC-RTC1
+Text GLabel 5550 13550 2    50   UnSpc ~ 0
+GND-RTC1
+Wire Wire Line
+	6600 13400 6600 13550
+Wire Wire Line
+	6600 13550 6700 13550
+Connection ~ 6600 13400
+Wire Wire Line
+	5450 13400 5450 13550
+Wire Wire Line
+	5450 13550 5550 13550
+Connection ~ 5450 13400
+Text GLabel 6700 13700 2    50   UnSpc ~ 0
+VS-INFRA_SENSORS
+Text GLabel 5550 13700 2    50   UnSpc ~ 0
+GND-INFRA_SENSORS
+Wire Wire Line
+	5450 13550 5450 13700
+Wire Wire Line
+	5450 13700 5550 13700
+Connection ~ 5450 13550
+Wire Wire Line
+	6700 13700 6600 13700
+Wire Wire Line
+	6600 13700 6600 13550
+Connection ~ 6600 13550
+Text GLabel 4500 1250 2    50   UnSpc ~ 0
+VCC-BUMBER1
+Text GLabel 6700 13850 2    50   UnSpc ~ 0
+VCC-BUMBER1
+Wire Wire Line
+	6600 13700 6600 13850
+Wire Wire Line
+	6600 13850 6700 13850
+Connection ~ 6600 13700
+Text GLabel 5550 14000 2    50   UnSpc ~ 0
+GND-SERVOS
+Text GLabel 6700 14000 2    50   UnSpc ~ 0
+VCC-SERVOS
+Wire Wire Line
+	5450 13700 5450 13850
+Wire Wire Line
+	5450 14000 5550 14000
+Connection ~ 5450 13700
+Wire Wire Line
+	6700 14000 6600 14000
+Wire Wire Line
+	6600 14000 6600 13850
+Connection ~ 6600 13850
+Text GLabel 4500 1150 2    50   UnSpc ~ 0
+GND-BUMBER1
+Wire Wire Line
+	3050 1250 4500 1250
+Wire Wire Line
+	3050 1150 3750 1150
+Wire Wire Line
+	4300 1150 4500 1150
+Wire Wire Line
+	4500 800  3750 800 
+Wire Wire Line
+	3750 800  3750 1150
+Connection ~ 3750 1150
+Wire Wire Line
+	3750 1150 4000 1150
+$Comp
+L Device:CP C1
+U 1 1 67D936D7
+P 4000 2650
+F 0 "C1" V 4255 2650 50  0000 C CNN
+F 1 ">470yF" V 4164 2650 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 4038 2500 50  0001 C CNN
+F 3 "~" H 4000 2650 50  0001 C CNN
+	1    4000 2650
+	0    -1   -1   0   
+$EndComp
+Text GLabel 4500 2250 2    50   UnSpc ~ 0
+VCC-SERVOS
+Text GLabel 4500 2400 2    50   UnSpc ~ 0
+GND-SERVOS
+Wire Wire Line
+	4500 2250 4400 2250
+Wire Wire Line
+	4400 2250 4400 2200
+Wire Wire Line
+	3050 2200 3700 2200
+Wire Wire Line
+	4300 2400 4300 2300
+Wire Wire Line
+	3050 2300 4300 2300
+Wire Wire Line
+	4300 2400 4500 2400
+Wire Wire Line
+	4400 3250 4400 3300
+Wire Wire Line
+	4400 3300 4500 3300
+Wire Wire Line
+	3050 3250 3700 3250
+Wire Wire Line
+	4500 3450 4300 3450
+Wire Wire Line
+	4300 3450 4300 3350
+Wire Wire Line
+	3050 3350 4300 3350
+Wire Wire Line
+	3850 2650 3700 2650
+Wire Wire Line
+	3700 2650 3700 2200
+Connection ~ 3700 2200
+Wire Wire Line
+	3700 2200 4400 2200
+Wire Wire Line
+	4150 2650 4300 2650
+Wire Wire Line
+	4300 2650 4300 2400
+Connection ~ 4300 2400
+$Comp
+L Device:CP C2
+U 1 1 6823037A
+P 4000 3700
+F 0 "C2" V 4255 3700 50  0000 C CNN
+F 1 ">470yF" V 4164 3700 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 4038 3550 50  0001 C CNN
+F 3 "~" H 4000 3700 50  0001 C CNN
+	1    4000 3700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4300 3450 4300 3700
+Wire Wire Line
+	4300 3700 4150 3700
+Connection ~ 4300 3450
+Wire Wire Line
+	3850 3700 3700 3700
+Wire Wire Line
+	3700 3700 3700 3250
+Connection ~ 3700 3250
+Wire Wire Line
+	3700 3250 4400 3250
+Text GLabel 10200 8900 0    50   UnSpc ~ 0
+TRIG-SONAR1
+Text GLabel 10200 9000 0    50   UnSpc ~ 0
+ECHO-SONAR1
+Wire Wire Line
+	10200 8900 10550 8900
+Wire Wire Line
+	10200 9000 10550 9000
+Wire Wire Line
+	17250 11300 17900 11300
+Wire Wire Line
+	18000 11300 19050 11300
+Text GLabel 5550 13850 2    50   UnSpc ~ 0
+GND-BUMBER1
+Wire Wire Line
+	5550 13850 5450 13850
+Connection ~ 5450 13850
+Wire Wire Line
+	5450 13850 5450 14000
+Connection ~ 6600 14000
+Connection ~ 5450 14000
+Text Notes 17400 11200 0    50   ~ 0
+RTC1 directrly connected to XBOARD
+Wire Wire Line
+	14500 11400 17400 11400
+Wire Wire Line
+	14500 11500 17500 11500
+Wire Wire Line
+	14500 11800 17250 11800
+Text GLabel 16400 9200 0    50   UnSpc ~ 0
+SDA_I2C-BRAIN1
+Text GLabel 16400 9300 0    50   UnSpc ~ 0
+SCL_I2C-BRAIN1
+Text GLabel 6700 14450 2    50   UnSpc ~ 0
+VCC-LCD1
+Text GLabel 5550 14450 2    50   UnSpc ~ 0
+GND-LCD1
+Wire Wire Line
+	16400 9200 17050 9200
+Wire Wire Line
+	16400 9300 17050 9300
+Wire Wire Line
+	16400 9100 17050 9100
+Wire Wire Line
+	16400 9000 17050 9000
+Text Label 17000 9300 2    50   ~ 0
+SDL
+Text Label 17000 9200 2    50   ~ 0
+SDA
+Text Label 17000 9100 2    50   ~ 0
+VCC
+Text Label 17000 9000 2    50   ~ 0
+GND
+$Comp
+L Connector:Conn_01x04_Male XPORT-LCD1
+U 1 1 62418222
+P 17250 9100
+F 0 "XPORT-LCD1" H 17350 9350 50  0000 L CNN
+F 1 "Conn_01x04_Male" V 17403 9244 50  0001 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 17250 9100 50  0001 C CNN
+F 3 "~" H 17250 9100 50  0001 C CNN
+	1    17250 9100
+	-1   0    0    -1  
+$EndComp
+Text GLabel 16250 13000 0    50   UnSpc ~ 0
+SCL_I2C-BRAIN1
+Text GLabel 16250 13100 0    50   UnSpc ~ 0
+SDA_I2C-BRAIN1
+Text GLabel 16250 12800 0    50   UnSpc ~ 0
+VCC-COMPASS1
+Text GLabel 16250 12900 0    50   UnSpc ~ 0
+GND-COMPASS1
+Wire Wire Line
+	16250 12800 16550 12800
+Wire Wire Line
+	16250 12900 16550 12900
+Text Label 16550 13100 2    50   ~ 0
+SDA
+Text Label 16550 13000 2    50   ~ 0
+SCL
+Text Label 16550 12900 2    50   ~ 0
+GND
+Text Label 16550 12800 2    50   ~ 0
+VCC
+NoConn ~ 16550 13700
+NoConn ~ 16550 13600
+NoConn ~ 16550 13500
+NoConn ~ 16550 13400
+NoConn ~ 16550 13300
+NoConn ~ 16550 13200
+Wire Wire Line
+	16250 13000 16550 13000
+Wire Wire Line
+	16250 13100 16550 13100
+$Comp
+L Switch:SW_SPST POWER-MOTORS1
+U 1 1 6ED8DF6C
+P 3950 10300
+F 0 "POWER-MOTORS1" H 4300 10450 50  0000 R CNB
+F 1 "SW_SPST" V 3995 10212 50  0001 R CNN
+F 2 "Button_Switch_THT:SW_MEC_5GTH9" H 3950 10300 50  0001 C CNN
+F 3 "~" H 3950 10300 50  0001 C CNN
+	1    3950 10300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 6F01DDED
+P 19050 11150
+F 0 "#FLG0101" H 19050 11225 50  0001 C CNN
+F 1 "PWR_FLAG" H 19050 11323 50  0000 C CNN
+F 2 "" H 19050 11150 50  0001 C CNN
+F 3 "~" H 19050 11150 50  0001 C CNN
+	1    19050 11150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	19050 11150 19050 11300
+Connection ~ 19050 11300
+Wire Wire Line
+	5450 12950 5450 13250
+Connection ~ 18000 12100
+Wire Wire Line
+	17000 11600 17300 11600
+Wire Wire Line
+	17300 11600 17300 12200
+Wire Wire Line
+	17300 12200 18500 12200
+Wire Wire Line
+	18500 12200 18500 11700
+NoConn ~ 17000 11600
+Wire Wire Line
+	14500 11700 17400 11700
+Text GLabel 6700 14300 2    50   UnSpc ~ 0
+VCC-COMPASS1
+Text GLabel 5550 14300 2    50   UnSpc ~ 0
+GND-COMPASS1
+Wire Wire Line
+	5450 14300 5550 14300
+Wire Wire Line
+	6700 14300 6600 14300
+Wire Wire Line
+	2750 11050 3000 11050
+$Comp
+L Switch:SW_SPST POWER-ROBOCAR1
+U 1 1 6EB6926F
+P 2550 11050
+F 0 "POWER-ROBOCAR1" H 2900 11200 50  0000 R CNB
+F 1 "SW_SPST" V 2595 10962 50  0001 R CNN
+F 2 "" H 2550 11050 50  0001 C CNN
+F 3 "~" H 2550 11050 50  0001 C CNN
+	1    2550 11050
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 12950 6700 12950
+Wire Wire Line
+	6600 13100 6600 12950
+$Comp
+L Regulator_Switching:CRE1S1205SC STEP_DOWN1
+U 1 1 6FE1F0CC
+P 3900 11250
+F 0 "STEP_DOWN1" H 3900 11729 50  0000 C CNN
+F 1 "~12V to 5V" H 3900 11631 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_muRata_CRE1xxxxxxSC_THT" H 3900 10850 50  0001 C CNN
+F 3 "http://power.murata.com/datasheet?/data/power/ncl/kdc_cre1.pdf" H 3900 10750 50  0001 C CNN
+	1    3900 11250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 11450 4650 11450
+Wire Wire Line
+	5450 11450 5450 12950
+Connection ~ 5450 12950
+$Comp
+L Device:Battery BATTERY1
+U 1 1 6FFA1495
+P 1150 11250
+F 0 "BATTERY1" H 1258 11296 50  0000 L CNN
+F 1 "12V" H 1258 11205 50  0000 L CNN
+F 2 "" V 1150 11310 50  0001 C CNN
+F 3 "~" V 1150 11310 50  0001 C CNN
+	1    1150 11250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 11450 3150 11450
+Wire Wire Line
+	6600 11050 6600 12950
+Connection ~ 6600 12950
+Wire Wire Line
+	3150 10300 3750 10300
+Wire Wire Line
+	3150 10300 3150 11050
+Connection ~ 3150 11050
+Wire Wire Line
+	3150 11050 3400 11050
+$Comp
+L Device:Fuse F1
+U 1 1 703358CB
+P 1650 11050
+F 0 "F1" V 1453 11050 50  0000 C CNN
+F 1 "2A?" V 1544 11050 50  0000 C CNN
+F 2 "Fuse:Fuseholder_Blade_ATO_Littelfuse_Pudenz_2_Pin" V 1580 11050 50  0001 C CNN
+F 3 "~" H 1650 11050 50  0001 C CNN
+	1    1650 11050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3150 11450 3150 11850
+Wire Wire Line
+	3150 11850 4650 11850
+Wire Wire Line
+	4650 11850 4650 11450
+Connection ~ 3150 11450
+Wire Wire Line
+	3150 11450 1150 11450
+Connection ~ 4650 11450
+Wire Wire Line
+	4650 11450 5450 11450
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 706B6479
+P 3000 10850
+F 0 "#FLG0103" H 3000 10925 50  0001 C CNN
+F 1 "PWR_FLAG" H 3000 11023 50  0000 C CNN
+F 2 "" H 3000 10850 50  0001 C CNN
+F 3 "~" H 3000 10850 50  0001 C CNN
+	1    3000 10850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 11050 2350 11050
+Wire Wire Line
+	1150 11050 1500 11050
+Wire Wire Line
+	3000 10850 3000 11050
+Connection ~ 3000 11050
+Wire Wire Line
+	3000 11050 3150 11050
+Wire Wire Line
+	10950 6950 10950 7300
+Wire Wire Line
+	10950 6950 11450 6950
+NoConn ~ 11250 7300
+$Sheet
+S 17350 12800 1300 700 
+U 70BDF1B6
+F0 "Compass1" 50
+F1 "compass1.sch" 50
+$EndSheet
+$Comp
+L Connector:Conn_01x10_Male XPORT-COMPASS1
+U 1 1 70D021E3
+P 16750 13200
+F 0 "XPORT-COMPASS1" H 16900 13750 50  0000 L CNN
+F 1 "Conn_01x10_Male" H 16778 13085 50  0001 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x10_P1.27mm_Vertical" H 16750 13200 50  0001 C CNN
+F 3 "~" H 16750 13200 50  0001 C CNN
+	1    16750 13200
+	-1   0    0    -1  
+$EndComp
+$Sheet
+S 17700 8750 1250 700 
+U 70F128DB
+F0 "LCD1" 50
+F1 "LCD1.sch" 50
+$EndSheet
+Wire Wire Line
+	6600 14300 6600 14450
+Wire Wire Line
+	6600 14450 6700 14450
+Connection ~ 6600 14300
+Wire Wire Line
+	5450 14300 5450 14450
+Wire Wire Line
+	5450 14450 5550 14450
+Connection ~ 5450 14300
+Text GLabel 16400 9000 0    50   UnSpc ~ 0
+GND-LCD1
+Text GLabel 16400 9100 0    50   UnSpc ~ 0
+VCC-LCD1
+$Sheet
+S 17650 7200 1350 800 
+U 7112CA3D
+F0 "Infra Sensors" 50
+F1 "infra_sensors.sch" 50
+$EndSheet
+$Comp
+L Connector:Conn_01x04_Male XPORT-SONAR1
+U 1 1 712144EA
+P 17050 4750
+F 0 "XPORT-SONAR1" H 17300 5000 50  0000 L CNN
+F 1 "Conn_01x04_Male" V 17203 4894 50  0001 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical" H 17050 4750 50  0001 C CNN
+F 3 "~" H 17050 4750 50  0001 C CNN
+	1    17050 4750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	16850 4650 16450 4650
+Wire Wire Line
+	16850 4750 16450 4750
+Wire Wire Line
+	16850 4850 16450 4850
+Text Label 16850 4650 2    50   ~ 0
+VCC
+Text Label 16850 4750 2    50   ~ 0
+TRIG
+Text Label 16850 4850 2    50   ~ 0
+ECHO
+Text Label 16850 4950 2    50   ~ 0
+GND
+Wire Wire Line
+	16850 4950 16450 4950
+Text GLabel 16450 4650 0    50   UnSpc ~ 0
+VCC-SONAR1
+Text GLabel 16450 4750 0    50   UnSpc ~ 0
+TRIG-SONAR1
+Text GLabel 16450 4850 0    50   UnSpc ~ 0
+ECHO-SONAR1
+Text GLabel 16450 4950 0    50   UnSpc ~ 0
+GND-SONAR1
+$Sheet
+S 17600 4350 1300 900 
+U 7137D927
+F0 "Sonar1" 50
+F1 "sonar1.sch" 50
+$EndSheet
+$Sheet
+S 6000 700  1200 650 
+U 71397A65
+F0 "Bumpper" 50
+F1 "bumpper.sch" 50
+$EndSheet
+$Sheet
+S 6050 1950 1150 650 
+U 71398118
+F0 "Servos" 50
+F1 "servos.sch" 50
+$EndSheet
+Wire Wire Line
+	6600 14000 6600 14300
+$Sheet
+S 6250 4700 1050 400 
+U 713CC97B
+F0 "Motors and driver" 50
+F1 "motors.sch" 50
+F2 "5V_IN-MOTOR_DRIVER1" U L 6250 4800 50 
+F3 "12V_IN-MOTOR_DRIVER1" U L 6250 5000 50 
+F4 "GND_IN-MOTOR_DRIVER1" U L 6250 4900 50 
+$EndSheet
+Wire Wire Line
+	5450 14000 5450 14300
+Wire Wire Line
+	4400 11050 5350 11050
+Connection ~ 5450 11450
+Wire Wire Line
+	5450 4900 6250 4900
+Wire Wire Line
+	5450 4900 5450 11450
+Wire Wire Line
+	5550 10300 5550 5000
+Wire Wire Line
+	5550 5000 6250 5000
+Wire Wire Line
+	4150 10300 5550 10300
+Wire Wire Line
+	5350 11050 5350 4800
+Wire Wire Line
+	5350 4800 6250 4800
+Connection ~ 5350 11050
+Wire Wire Line
+	5350 11050 6600 11050
+$EndSCHEMATC
